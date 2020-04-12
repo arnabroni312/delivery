@@ -11,7 +11,7 @@ if(isset($_POST['login']))
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $_SESSION['fosuid']=$ret['ID'];
-     header('location:viewdetails.php');
+     header('location:viewactive.php?user_id='.$ret['ID']);
     }
     else{
     $msg="Invalid Details.";
