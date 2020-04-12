@@ -86,7 +86,7 @@ $name=$row['NAME'];
                <?php
 
 $fdeid=$_SESSION['fosuid'];
-$ret=mysqli_query($con,"select ode_id from tblodrdeli where deli_id='$fdeid' and deliv_status = 'NULL' ");
+$ret=mysqli_query($con,"select ode_id from tblodrdeli where deli_id='$fdeid' and deliv_status is null ");
 while ($row=mysqli_fetch_array($ret)) {
 
 
